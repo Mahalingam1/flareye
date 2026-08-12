@@ -1,0 +1,130 @@
+@import "tailwindcss";
+
+@layer base {
+  * {
+    font-family: 'Quicksand', sans-serif !important;
+  }
+  body {
+    font-family: 'Quicksand', sans-serif !important;
+  }
+  h1, h2, h3, h4, .font-heading, button, input, select, textarea {
+    font-family: 'Quicksand', sans-serif !important;
+  }
+}
+
+/* Accessibility & Easy Mode Overrides for Elderly Users */
+.easy-mode {
+  --font-scale: 1.35;
+}
+
+.easy-mode body {
+  font-size: 1.35rem !important;
+  line-height: 1.6 !important;
+}
+
+.easy-mode button, .easy-mode a, .easy-mode input, .easy-mode select {
+  min-height: 60px !important;
+  min-width: 60px !important;
+  font-size: 1.25rem !important;
+  font-weight: 800 !important;
+}
+
+/* Text Size Scaling for Senior Citizens */
+.text-scale-small {
+  font-size: 1.05rem;
+}
+.text-scale-normal {
+  font-size: 1.2rem;
+}
+.text-scale-large {
+  font-size: 1.45rem;
+}
+
+/* High Contrast Mode */
+.high-contrast {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+.high-contrast .glass-panel {
+  background: #09090b !important;
+  border: 2px solid #ffffff !important;
+  box-shadow: none !important;
+}
+
+.high-contrast button {
+  border: 2px solid #ffffff !important;
+  font-weight: 800 !important;
+}
+
+/* Glassmorphism Styles */
+.glass-panel {
+  background: rgba(28, 14, 13, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(249, 115, 22, 0.2);
+}
+
+.glass-panel-glow {
+  background: rgba(41, 15, 12, 0.85);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(239, 68, 68, 0.4);
+  box-shadow: 0 0 35px rgba(239, 68, 68, 0.25);
+}
+
+/* Fiery Glowing Utilities */
+.border-fire {
+  border-color: rgba(249, 115, 22, 0.4) !important;
+}
+
+.shadow-fire-glow {
+  box-shadow: 0 0 25px rgba(239, 68, 68, 0.35);
+}
+
+@keyframes flamePulse {
+  0%, 100% { opacity: 0.6; filter: drop-shadow(0 0 10px rgba(239,68,68,0.6)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 25px rgba(249,115,22,0.9)); }
+}
+
+.animate-flame-pulse {
+  animation: flamePulse 3s infinite ease-in-out;
+}
+
+/* Eagle Eye Scanning Animations */
+@keyframes irisScan {
+  0% { transform: scale(0.8) rotate(0deg); opacity: 0.3; }
+  50% { transform: scale(1.1) rotate(180deg); opacity: 0.9; }
+  100% { transform: scale(0.8) rotate(360deg); opacity: 0.3; }
+}
+
+.animate-iris {
+  animation: irisScan 6s infinite linear;
+}
+
+@keyframes radarSweep {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-radar {
+  animation: radarSweep 4s infinite linear;
+}
+
+/* Custom Scrollbars */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1c0a09;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #7c2d12;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ea580c;
+}
